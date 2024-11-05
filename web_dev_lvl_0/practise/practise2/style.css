@@ -1,0 +1,60 @@
+body {
+    overflow: hidden;
+}
+
+.container{
+    background-color: orange;
+    padding: 20px;
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+
+    /* this 200vh height is made just to make the body fully orange and see  */
+    
+}
+
+    
+
+
+
+.first{
+    background-color: blue;
+    width: 200px;
+    position: sticky;  /*now since its relative we can use top bottom etc and can use absolute or relative or static*/
+    left: 0;
+    top: 0;
+
+}
+.first>h2{
+    color: red;
+}
+.first h2:hover{
+    color: red;
+
+}
+.first h2::before{
+    content: " hello";
+}
+input:focus{
+    background-color: aqua;
+}
+.second{
+    background-color: yellow;
+    width: 200px;
+}
+.third{
+    background-color: green;
+    width: 200px;
+
+}
+
+.content{
+    background-color: green;
+    color: black;
+    padding:20px;
+    width: 200px;
+    border: 5px solid black;
+    margin: 20px;
+
+}
