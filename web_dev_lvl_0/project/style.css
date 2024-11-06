@@ -5,14 +5,15 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.hero-section {
-    background-image: url(banner.jpg);
+.hero-section{
+    background-image: url(banner.avif);
     height: 100vh; /* 100vh ensures it takes the full height of the viewport */
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     /* this last 3 functions are from chatgpt */
     /* ctrl i gives the options of a property  */
+    background-attachment: fixed;
     background-blend-mode:overlay;
     background-color: rgba(0,0,0,0.5);  /* this 0.5 is opacity takes values 0 to 1*/
     position: relative;
@@ -28,7 +29,7 @@
 
 }
 .book-button,
-.know-button{
+.know-more{
     background-color: aqua;
     font-size: 18px;
     border: none;
@@ -38,22 +39,49 @@
     margin-top: 10px;
     cursor: pointer;
 }
-.about-us{
-    float: left;
-    width: 50%;
-    margin: 10px 10px 0px 20px;
-    text-align: left;
-}
-.about-section > h1{    /*this h1 is the immediate child of about-section*/
+.hero-section{
     text-align: center;
-    margin: 10px 0px;
+    margin-bottom: 20px;
+}
+.about-section{
+    display: flex;  /* chgpt why is the display flex used . also this is applied to the parent class*/
+    justify-content:space-around;
+    align-items: center;
+
+}
+
+.about-section > h1{    /*this h1 is the immediate child of about-section*/
+    
     text-decoration: underline;
 }
-.amenities{
+.about-us{
+    width: 50%;
+
+}
+.about-heading,
+.know-more-container{
     text-align: center;
 }
-.amenities ul{
-    display: inline-block;  /*automatically align to the available space*/
-    text-align: left;
-    margin: top 10px; ;
+.fa-solid{
+    margin-right: 10px;
+    
 }
+ul li{
+    list-style: none;
+    
+    
+}
+
+.room-images img{
+    width: 700px;
+    height: 400px;
+
+}
+
+.room-type-container{
+    display: flex;
+    justify-content: space-around  ;
+    align-items: center;
+}
+
+
