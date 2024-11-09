@@ -18,7 +18,7 @@
     flex-flow: column;
 }
 .calculator{
-    background-color: #1C1E22;
+    background-color: #07080a;
     padding: 20px;
     border-radius: 10px;
     max-height: 100vh;
@@ -28,7 +28,7 @@
 }
 button {
     color:whitesmoke;
-    background-color: #4A4A4A;
+    background-color: #08070d;
     display: flexbox;
     font-size: larger;
     font-family: sans-serif;
@@ -37,6 +37,8 @@ button {
     width: 60px;
     height: 60px;
     border-radius: 5px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+
     cursor: pointer;
     margin: 5px;
 }
@@ -57,8 +59,11 @@ button {
     display: flex;
     
 }
+.large-button{
+    height: 105px;
+}
 input {
-    
+    /* in progress */
     font-size: xx-large;
     color: black;
     width: 300px;
