@@ -48,7 +48,7 @@ button {
     gap: 5px;
 
 }
-.fourth-row,
+/* .fourth-row,
 .fifth-row {
     display: flex;
     width: 100%;
@@ -60,8 +60,8 @@ button {
     
 }
 .large-button{
-    height: 105px;
-}
+    height: 105px; */
+/* } */
 input {
     /* in progress */
     font-size: xx-large;
