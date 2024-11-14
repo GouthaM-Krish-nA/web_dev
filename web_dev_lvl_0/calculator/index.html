@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/web/icons8-calculator-doodle-32.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/web/icons8-calculator-doodle-32.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-</head>
-<body>
-<div class="container">
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="calc-display">
+          <form action="">
+            <input type="text" style="background-color: #1e4f2b" />
+          </form>
+        </div>
+        <br />
+        <br />
 
-    
-    <div class="calculator">
-     <div class="calc-display">
-         <form action="">
-             <input type="text" style="background-color: #1e4f2b ;" >
-
-         </form>
-     </div>
-     <br>
-     <br>
-    
-     <div class="calcu-buttons">
-         <div class="first-row">
-             <button class="btn green-btn">AC</button>
-             <button class="btn">DE</button>
-             <button class="btn">x²</button>
-             <button class="btn">÷</button>
-         </div>
-         <div class="second-row">
-             <button class="btn">7</button>
-             <button class="btn">8</button>
-             <button class="btn">9</button>
-             <button class="btn">×</button>
-         </div>
-         <div class="third-row">
-             <button class="btn">4</button>
-             <button class="btn">5</button>
-             <button class="btn">6</button>
-             <button class="btn">-</button>
-         </div>
-         <div class="fourth-row">
-             <button class="btn">1</button>
-             <button class="btn">2</button>
-             <button class="btn">3</button>
-             <button class="btn large-button">+</button>
-
-         </div>
-         <div class="fifth-row">
-             <button class="btn">.</button>
-             <button class="btn">0</button>
-             <button class="btn">%</button>
-             <button class="btn">=</button>
-
-         </div>
-          
-       
-
-     </div>
+        <div class="calcu-buttons">
+          <div class="first-row">
+            <button class="btn" onclick="clearDisplay()">AC</button>
+            <button class="btn" onclick="deleteLastChar()">DE</button>
+            <button class="btn" onclick="squareNumber()">x²</button>
+            <button class="operator-btn" onclick="appendToDisplay('÷')">÷</button>
+          </div>
+          <div class="second-row">
+            <button class="btn" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" onclick="appendToDisplay('9')">9</button>
+            <button class="operator-btn" onclick="appendToDisplay('×')">×</button>
+          </div>
+          <div class="third-row">
+            <button class="btn" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" onclick="appendToDisplay('6')">6</button>
+            <button class="operator-btn" onclick="appendToDisplay('-')">−</button>
+          </div>
+          <div class="fourth-row">
+            <button class="btn" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" onclick="appendToDisplay('3')">3</button>
+            <button class="operator-btn" onclick="appendToDisplay('+')">+</button>
+          </div>
+          <div class="fifth-row">
+            <button class="btn" onclick="appendToDisplay('.')">.</button>
+            <button class="btn" onclick="appendToDisplay('0')">0</button>
+            <button class="operator-btn" onclick ="appendToDisplay('%')">%</button>
+            <button class="btn" onclick="calculate()">=</button>
+          </div>
+        </div>
+      </div>
     </div>
-</div>    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
