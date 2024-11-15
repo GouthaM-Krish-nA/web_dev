@@ -1,4 +1,3 @@
-
 const display = document.querySelector(".calc-display input");
 function appendToDisplay(input) {
   if (input === "%") {
@@ -8,9 +7,11 @@ function appendToDisplay(input) {
       display.value = (parseFloat(currentValue) / 100).toString();
     } else {
       display.value += input;
+      display.scrollLeft = display.scrollWidth;
     }
   } else {
     display.value += input;
+    display.scrollLeft = display.scrollWidth;
   }
 }
 function clearDisplay() {
@@ -19,14 +20,15 @@ function clearDisplay() {
 function calculate() {
   try {
     // Replace the percentage operator with division by 100
-    const sanitizedInput = display.value
-      .replace(/÷/g, "/")
-      .replace(/×/g, "*");
+    const sanitizedInput = display.value.replace(/÷/g, "/").replace(/×/g, "*");
     // Evaluate the sanitized expression
     display.value = eval(sanitizedInput);
   } catch (error) {
     display.value = "Error"; // In case of an error during evaluation
   }
+}
+function deleteLastChar() {
+  display.value = display.value.slice(0, -1);
 }
 
 function squareNumber() {
