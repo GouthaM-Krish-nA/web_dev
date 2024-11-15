@@ -14,6 +14,7 @@ function appendToDisplay(input) {
     display.scrollLeft = display.scrollWidth;
   }
 }
+
 function clearDisplay() {
   display.value = "";
 }
@@ -44,3 +45,24 @@ function squareNumber() {
     display.value = "Error";
   }
 }
+display.addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  const validChars = /^[0-9+\-/%().]*$/; // Only allow digits and valid symbols
+
+  // If the input contains any invalid character, remove it
+  if (!validChars.test(inputValue)) {
+    event.target.value = inputValue.replace(/[^0-9+\-*/%().]/g, ""); // Remove invalid chars
+  }
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === "*") {
+    event.preventDefault();  // Prevent default action of typing the *
+    appendToDisplay("×");    // Append × symbol
+  } else if (event.key === "/") {
+    event.preventDefault();  // Prevent default action of typing the /
+    appendToDisplay("÷");    // Append ÷ symbol
+  } else if (/[0-9+\-×÷%().]/.test(event.key)) {
+    // If the key pressed is a valid character (digit or symbol), append it
+    appendToDisplay(event.key);
+  }
+});
