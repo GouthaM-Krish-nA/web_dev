@@ -1,12 +1,10 @@
 * {
   box-sizing: border-box;
-  padding: 0; 
+  padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-/* body {
-  background: linear-gradient(45deg, #0a0a0a, #3a4452);
-} */
+
 .container {
   width: 100%;
   height: 100vh;
@@ -27,7 +25,7 @@
 }
 input {
   border-radius: 0.3125rem;
-  font-family: 'Segment7';
+  font-family: "Segment7";
   font-weight: 500;
   font-size: 3.5rem;
   overflow: hidden;
@@ -36,12 +34,10 @@ input {
   width: 18.75rem;
   height: 5.625rem;
   padding: 0.625rem;
-
-
 }
 .calc-display {
   padding: 0.625rem 0 0 0; /* Top 30px, Right 0px, Bottom 20px, Left 0px */
- /* Increase the padding vertically */
+  /* Increase the padding vertically */
 }
 
 input::placeholder {
@@ -77,6 +73,10 @@ button:hover {
 button:active {
   background-color: rgba(15, 15, 15, 0.61);
 }
-/* issues in this are that font size should reduce automatically */
-/* backspace entered from keyboard should work without clicking inside the box  */
-/* enter button in keyboard should result in '=' function */
+@media screen and (max-width: 480px) {
+  .container {
+    align-items: flex-end;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  }
+  .cla;
+}

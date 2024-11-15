@@ -71,3 +71,7 @@ document.addEventListener("keydown", (event) => {
     appendToDisplay(event.key);
   }
 });
+// issues in this are that font size should reduce automatically */
+// backspace entered from keyboard should work without clicking inside the box
+// enter button in keyboard should result in '=' function
+//  how to give touch sounds
