@@ -29,8 +29,13 @@ function calculate() {
   }
 }
 function deleteLastChar() {
-  display.value = display.value.slice(0, -1);
+  if (display.value === "Error") {
+    display.value = ""; // Clear the full screen if "Error" is displayed
+  } else {
+    display.value = display.value.slice(0, -1); // Otherwise, remove the last character
+  }
 }
+
 
 function squareNumber() {
   try {
