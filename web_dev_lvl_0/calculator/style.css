@@ -17,7 +17,7 @@
   flex-flow: column;
 }
 .calculator {
-  background-color: #07080a;
+  background: linear-gradient(to right, #07080a, #081831);
   padding: 1.25rem;
   border-radius: 0.625rem;
   max-height: 100vh;
@@ -30,6 +30,7 @@ input {
   font-family: 'Segment7';
   font-weight: 500;
   font-size: 3.5rem;
+  overflow: hidden;
   color: #090c11;
   text-align: right;
   width: 18.75rem;
@@ -76,3 +77,6 @@ button:hover {
 button:active {
   background-color: rgba(15, 15, 15, 0.61);
 }
+/* issues in this are that font size should reduce automatically */
+/* backspace entered from keyboard should work without clicking inside the box  */
+/* enter button in keyboard should result in '=' function */

@@ -36,7 +36,6 @@ function deleteLastChar() {
   }
 }
 
-
 function squareNumber() {
   try {
     const currentValue = parseFloat(display.value);
@@ -59,15 +58,16 @@ display.addEventListener("input", (event) => {
     event.target.value = inputValue.replace(/[^0-9+\-*/%().]/g, ""); // Remove invalid chars
   }
 });
-document.addEventListener('keydown', (event) => {
-  if (event.key === "*") {
-    event.preventDefault();  // Prevent default action of typing the *
-    appendToDisplay("×");    // Append × symbol
-  } else if (event.key === "/") {
-    event.preventDefault();  // Prevent default action of typing the /
-    appendToDisplay("÷");    // Append ÷ symbol
-  } else if (/[0-9+\-×÷%().]/.test(event.key)) {
-    // If the key pressed is a valid character (digit or symbol), append it
+document.addEventListener("keydown", (event) => {
+  // List of allowed keys including numbers, basic operators, and parentheses
+  const validKeys = /[0-9+\-().%]/;
+
+  // Prevent default action for all valid keys to avoid double input
+  if (event.key === "*" || event.key === "/") {
+    event.preventDefault();
+    appendToDisplay(event.key === "*" ? "×" : "÷"); // Convert * to × and / to ÷
+  } else if (validKeys.test(event.key)) {
+    event.preventDefault(); // Prevents the double input issue
     appendToDisplay(event.key);
   }
 });
